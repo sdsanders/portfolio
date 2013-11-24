@@ -1,0 +1,15 @@
+---
+layout: default
+title: Steven D. Sanders
+---
+
+<div id="home">
+	<h2>What's going on here?</h2>
+	<p>I'm currently working on migrating my website from WordPress to Jekyll, a static site generator. The site is deployed to Github pages, rather than the conventional hosting that I have been using for the last several years.</p>
+	<h2>Blog Posts</h2>
+	<ul class="posts">
+		{% for post in site.posts %}
+		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
