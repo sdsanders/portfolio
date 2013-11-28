@@ -1,4 +1,5 @@
 name: Steven D. Sanders - Front-End Developer
 markdown: redcarpet
 pygments: false
+baseurl: http://www.stevendsanders.com
 permalink: pretty
