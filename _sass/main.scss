@@ -26,8 +26,13 @@ h6 {
 }
 
 a {
+  @include transition(all 0.3s ease-in-out);
   color: $link-color;
   text-decoration: none;
+
+  &:hover {
+    color: lighten($link-color, 20%);
+  }
 }
 
 
@@ -102,7 +107,7 @@ a {
   }
 }
 
-.icon-github:before {
+.icon-facebook:before {
   content: "\e600";
 }
 
@@ -114,7 +119,7 @@ a {
   content: "\e602";
 }
 
-.icon-facebook:before {
+.icon-github:before {
   content: "\e603";
 }
 

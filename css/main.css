@@ -51,56 +51,64 @@ h6 {
 
 /* line 28, ../_sass/main.scss */
 a {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: #e6e000;
   text-decoration: none;
 }
+/* line 33, ../_sass/main.scss */
+a:hover {
+  color: #fffa4d;
+}
 
-/* line 36, ../_sass/main.scss */
+/* line 41, ../_sass/main.scss */
 .primary-header {
   text-align: center;
 }
 
-/* line 40, ../_sass/main.scss */
+/* line 45, ../_sass/main.scss */
 .site-title {
   display: block;
 }
 
-/* line 44, ../_sass/main.scss */
+/* line 49, ../_sass/main.scss */
 .profession {
   display: block;
   font-size: 16px;
 }
 
-/* line 53, ../_sass/main.scss */
+/* line 58, ../_sass/main.scss */
 .primary-navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 59, ../_sass/main.scss */
+/* line 64, ../_sass/main.scss */
 .primary-navigation li {
   display: inline-block;
   margin: 7px;
 }
 
-/* line 68, ../_sass/main.scss */
+/* line 73, ../_sass/main.scss */
 .primary-content {
   margin: auto;
   max-width: 500px;
 }
 
-/* line 76, ../_sass/main.scss */
+/* line 81, ../_sass/main.scss */
 .social-links {
   list-style: none;
   text-align: center;
 }
-/* line 80, ../_sass/main.scss */
+/* line 85, ../_sass/main.scss */
 .social-links li {
   display: inline-block;
   margin: 0 5px;
 }
 
-/* line 87, ../_sass/main.scss */
+/* line 92, ../_sass/main.scss */
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: 'portfolio-icons';
@@ -116,23 +124,23 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 105, ../_sass/main.scss */
-.icon-github:before {
+/* line 110, ../_sass/main.scss */
+.icon-facebook:before {
   content: "\e600";
 }
 
-/* line 109, ../_sass/main.scss */
+/* line 114, ../_sass/main.scss */
 .icon-linkedin:before {
   content: "\e601";
 }
 
-/* line 113, ../_sass/main.scss */
+/* line 118, ../_sass/main.scss */
 .icon-twitter:before {
   content: "\e602";
 }
 
-/* line 117, ../_sass/main.scss */
-.icon-facebook:before {
+/* line 122, ../_sass/main.scss */
+.icon-github:before {
   content: "\e603";
 }
 
