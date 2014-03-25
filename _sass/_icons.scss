@@ -1,0 +1,62 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    display: inline-block;
+    font-family: 'portfolio-icons';
+    font-size: 40px;
+    speak: none;
+    vertical-align: -10%;
+    width: 50px;
+  }
+}
+
+.icon-user:before {
+  color: $red;
+  content: "\e604";
+}
+.icon-comments:before {
+  color: $blue;
+  content: "\e605";
+}
+.icon-twitter:before {
+  content: "\e602";
+}
+.icon-facebook:before {
+  content: "\e600";
+}
+.icon-github:before {
+  content: "\e603";
+}
+.icon-envelope-alt:before {
+  content: "\e606";
+  display: none;
+
+  @media screen and (min-width: $break-small) {
+    display: inline-block;
+  }
+}
+.icon-linkedin:before {
+  content: "\e601";
+}
+.icon-suitcase:before {
+  color: $green;
+  content: "\e607";
+}
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'icons';
+        src: url('fonts/icons.svg#icons') format('svg');
+    }
+}

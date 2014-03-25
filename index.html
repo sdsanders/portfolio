@@ -1,15 +1,39 @@
 ---
 layout: default
-title: Steven D. Sanders
+title: Steven D. Sanders - Front-End Developer
 ---
 
 <div id="home">
-	<h2>What's going on here?</h2>
-	<p>I'm currently working on migrating my website from WordPress to Jekyll, a static site generator. The site is deployed to Github pages, rather than the conventional hosting that I have been using for the last several years.</p>
-	<h2>Blog Posts</h2>
-	<ul class="posts">
-		{% for post in site.posts %}
-		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-		{% endfor %}
-	</ul>
+	<section class="about-me" id="about">
+		<img src="images/me.jpg" alt="Steve Sanders" class="about-photo" />
+		<h2>About Me</h2>
+		<p>I'm a front-end and WordPress developer in Downers Grove, Illinois. I currently work at <a href="http://www.officite.com/" target="_blank">Officite</a>, where I develop templates for their proprietary content management system. I previously worked at <a href="http://www.webdesign309.com/" target="_blank">WebDesign309</a> in Peoria, Illinois, where I developed custom responsive WordPress templates.</p>
+	</section>
+	<section class="portfolio" id="work">
+		<h2>My Work</h2>
+		<figure class="portfolio-item">
+			<a href="http://www.pekintotaldentalcare.com/" target="_blank">
+				<img src="images/94yvRLlG0xvBK1U5.png" alt="Total Dental Care">
+				<figcaption>
+					Responsive WordPress Development
+				</figcaption>
+			</a>
+		</figure>
+		<figure class="portfolio-item">
+			<a href="http://www.westutter.org/" target="_blank">
+				<img src="images/RN3IoQzITgTIHwfn.png" alt="National Stuttering Association">
+				<figcaption>
+					Responsive WordPress Development
+				</figcaption>
+			</a>
+		</figure>
+		<figure class="portfolio-item">
+			<a href="http://www.7onprospect.com/" target="_blank">
+				<img src="images/Ira1LuSmWg4nVhq0.png" alt="Seven on Prospect">
+				<figcaption>
+					Responsive WordPress Development
+				</figcaption>
+			</a>
+		</figure>
+	</section>
 </div>

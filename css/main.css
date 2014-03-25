@@ -22,7 +22,86 @@
   font-style: normal;
 }
 
-/* line 8, ../_sass/main.scss */
+/* line 2, ../_sass/_icons.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 12, ../_sass/_icons.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  display: inline-block;
+  font-family: 'portfolio-icons';
+  font-size: 40px;
+  speak: none;
+  vertical-align: -10%;
+  width: 50px;
+}
+
+/* line 22, ../_sass/_icons.scss */
+.icon-user:before {
+  color: #f35656;
+  content: "\e604";
+}
+
+/* line 26, ../_sass/_icons.scss */
+.icon-comments:before {
+  color: #74e9c2;
+  content: "\e605";
+}
+
+/* line 30, ../_sass/_icons.scss */
+.icon-twitter:before {
+  content: "\e602";
+}
+
+/* line 33, ../_sass/_icons.scss */
+.icon-facebook:before {
+  content: "\e600";
+}
+
+/* line 36, ../_sass/_icons.scss */
+.icon-github:before {
+  content: "\e603";
+}
+
+/* line 39, ../_sass/_icons.scss */
+.icon-envelope-alt:before {
+  content: "\e606";
+  display: none;
+}
+@media screen and (min-width: 481px) {
+  /* line 39, ../_sass/_icons.scss */
+  .icon-envelope-alt:before {
+    display: inline-block;
+  }
+}
+
+/* line 47, ../_sass/_icons.scss */
+.icon-linkedin:before {
+  content: "\e601";
+}
+
+/* line 50, ../_sass/_icons.scss */
+.icon-suitcase:before {
+  color: #75cf50;
+  content: "\e607";
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'icons';
+    src: url("fonts/icons.svg#icons") format("svg");
+}
+}
+/* line 9, ../_sass/main.scss */
 *,
 *:before,
 *:after {
@@ -31,122 +110,293 @@
   box-sizing: border-box;
 }
 
-/* line 12, ../_sass/main.scss */
+/* line 14, ../_sass/main.scss */
+html,
 body {
-  background: url(../images/bg-body.png);
-  color: white;
-  font-family: "museo_sans_500regular", Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 
-/* line 23, ../_sass/main.scss */
+/* line 18, ../_sass/main.scss */
+body {
+  background: url(../images/bg-body.png);
+  color: #d6d7d9;
+  font: 18px "Cabin", Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* line 30, ../_sass/main.scss */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "museo_slab500", Georgia, serif;
+  font-family: "Arvo", Georgia, serif;
   font-weight: normal;
 }
 
-/* line 28, ../_sass/main.scss */
+/* line 35, ../_sass/main.scss */
 a {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  color: #e6e000;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #fff91a;
   text-decoration: none;
 }
-/* line 33, ../_sass/main.scss */
+/* line 40, ../_sass/main.scss */
 a:hover {
-  color: #fffa4d;
-}
-
-/* line 41, ../_sass/main.scss */
-.primary-header {
-  text-align: center;
+  color: #e6e000;
 }
 
 /* line 45, ../_sass/main.scss */
-.site-title {
-  display: block;
+h1 {
+  font-size: 56px;
 }
 
 /* line 49, ../_sass/main.scss */
-.profession {
-  display: block;
-  font-size: 16px;
+h2 {
+  font-size: 36px;
+  margin-top: 0;
+}
+/* line 53, ../_sass/main.scss */
+h2:before {
+  color: #f35656;
+  content: "{";
+  display: inline-block;
+  margin-right: 30px;
+}
+@media screen and (min-width: 481px) {
+  /* line 49, ../_sass/main.scss */
+  h2 {
+    font-size: 48px;
+  }
 }
 
-/* line 58, ../_sass/main.scss */
+/* line 68, ../_sass/main.scss */
+.primary-header {
+  -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  background: url(../images/bg-header.jpg) no-repeat fixed;
+  background-size: contain;
+  border-bottom: 1px solid #111;
+  padding: 50px 0;
+  text-align: center;
+  height: inherit;
+}
+
+/* line 78, ../_sass/main.scss */
+.header-interior {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+@media screen and (min-width: 481px) {
+  /* line 78, ../_sass/main.scss */
+  .header-interior {
+    bottom: 4%;
+  }
+}
+
+/* line 87, ../_sass/main.scss */
+.site-title {
+  color: #fffa4d;
+  display: block;
+  margin: 0 0 50px;
+}
+
+/* line 93, ../_sass/main.scss */
+.profession {
+  color: #d6d7d9;
+  display: block;
+  font: 24px "Cabin", Arial, Helvetica, sans-serif;
+}
+
+/* line 103, ../_sass/main.scss */
 .primary-navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 64, ../_sass/main.scss */
+/* line 109, ../_sass/main.scss */
 .primary-navigation li {
-  display: inline-block;
-  margin: 7px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  display: block;
+  float: left;
+  width: 33%;
+}
+/* line 115, ../_sass/main.scss */
+.primary-navigation li:first-child {
+  border: none;
+}
+@media screen and (min-width: 481px) {
+  /* line 109, ../_sass/main.scss */
+  .primary-navigation li {
+    border: none;
+    display: inline-block;
+    float: none;
+    margin: 20px;
+    width: auto;
+  }
+}
+/* line 128, ../_sass/main.scss */
+.primary-navigation a {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  padding: 15px;
+}
+/* line 135, ../_sass/main.scss */
+.primary-navigation a:before {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 24px;
+  vertical-align: -10%;
+  width: auto;
+}
+/* line 143, ../_sass/main.scss */
+.primary-navigation a:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+@media screen and (min-width: 481px) {
+  /* line 128, ../_sass/main.scss */
+  .primary-navigation a {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    display: inline;
+  }
+  /* line 151, ../_sass/main.scss */
+  .primary-navigation a:before {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
 }
 
-/* line 73, ../_sass/main.scss */
+/* line 163, ../_sass/main.scss */
 .primary-content {
   margin: auto;
-  max-width: 500px;
+  padding: 0 15px;
+  max-width: 1000px;
+}
+/* line 168, ../_sass/main.scss */
+.primary-content h2 {
+  text-align: left;
+}
+/* line 172, ../_sass/main.scss */
+.primary-content p {
+  line-height: 1.5;
+}
+@media screen and (min-width: 481px) {
+  /* line 163, ../_sass/main.scss */
+  .primary-content {
+    padding: 0;
+  }
 }
 
-/* line 81, ../_sass/main.scss */
-.social-links {
-  list-style: none;
+/* line 184, ../_sass/main.scss */
+.about-me {
+  padding: 100px 0;
+}
+
+/* line 188, ../_sass/main.scss */
+.about-photo {
+  display: none;
+}
+@media screen and (min-width: 481px) {
+  /* line 188, ../_sass/main.scss */
+  .about-photo {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    display: block;
+    float: right;
+    margin-left: 50px;
+  }
+}
+
+/* line 202, ../_sass/main.scss */
+.portfolio {
+  padding: 100px 0;
   text-align: center;
 }
-/* line 85, ../_sass/main.scss */
+
+/* line 207, ../_sass/main.scss */
+.portfolio-item {
+  display: inline-block;
+  margin: 10px;
+}
+/* line 211, ../_sass/main.scss */
+.portfolio-item img {
+  max-width: 100%;
+}
+@media screen and (min-width: 481px) {
+  /* line 211, ../_sass/main.scss */
+  .portfolio-item img {
+    max-width: 300px;
+  }
+}
+
+/* line 223, ../_sass/main.scss */
+.primary-footer {
+  margin: auto;
+  max-width: 1000px;
+  padding: 100px 15px;
+}
+@media screen and (min-width: 481px) {
+  /* line 223, ../_sass/main.scss */
+  .primary-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 234, ../_sass/main.scss */
+.social-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+/* line 239, ../_sass/main.scss */
 .social-links li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 20px 0;
 }
-
-/* line 92, ../_sass/main.scss */
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'portfolio-icons';
-  speak: none;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  text-indent: -9999px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* line 243, ../_sass/main.scss */
+.social-links li:first-child {
+  display: block;
 }
-
-/* line 110, ../_sass/main.scss */
-.icon-facebook:before {
-  content: "\e600";
+/* line 246, ../_sass/main.scss */
+.social-links li:first-child a {
+  font-size: 18px;
 }
-
-/* line 114, ../_sass/main.scss */
-.icon-linkedin:before {
-  content: "\e601";
+/* line 252, ../_sass/main.scss */
+.social-links a {
+  color: #fff;
+  font-size: 0;
 }
-
-/* line 118, ../_sass/main.scss */
-.icon-twitter:before {
-  content: "\e602";
+/* line 256, ../_sass/main.scss */
+.social-links a:before {
+  color: #fffa4d;
 }
-
-/* line 122, ../_sass/main.scss */
-.icon-github:before {
-  content: "\e603";
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: 'icons';
-    src: url("fonts/icons.svg#icons") format("svg");
-}
+@media screen and (min-width: 481px) {
+  /* line 234, ../_sass/main.scss */
+  .social-links {
+    text-align: left;
+  }
+  /* line 264, ../_sass/main.scss */
+  .social-links li {
+    display: block;
+  }
+  /* line 268, ../_sass/main.scss */
+  .social-links a {
+    font-size: 16px;
+  }
 }

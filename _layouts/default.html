@@ -7,37 +7,61 @@
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
+  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 
 </head>
 <body>
 
   <header class="primary-header">
-    <h1 class="site-title"><a href="/">Steven D Sanders <span class="profession">Front-End Developer</span></a></h1>
+    <div class="header-interior">
+      <h1 class="site-title">Steven D Sanders <span class="profession">Front-End Developer</span></h1>
 
-    <nav class="primary-navigation">
-      <ul>
-        <li><a href="{{ site.baseurl }}/about-me/">About Me</a></li>
-        <li><a href="#">My Work</a></li>
-        <li><a href="#">My Blog</a></li>
-        <li><a href="#">Contact Me</a></li>
-      </ul>
-    </nav>
+      <nav class="primary-navigation" id="navigation">
+        <ul>
+          <li><a href="#about" class="icon-user">About Me</a></li>
+          <li><a href="#work" class="icon-suitcase">My Work</a></li>
+          <li><a href="#contact" class="icon-comments">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="primary-content">
     {{ content }}
   </main>
 
-  <footer class="primary-footer">
-      <ul class="social-links">
-        <li><a href="http://www.linkedin.com/pub/steve-sanders/39/11b/215" class="icon-linkedin" target="_blank"></a></li>
-        <li><a href="http://www.github.com/sdsanders" class="icon-github" target="_blank"></a></li>
-        <li><a href="http://www.twitter.com/stevendsanders" class="icon-twitter" target="_blank"></a></li>
-        <li><a href="https://www.facebook.com/steven.douglas.sanders" class="icon-facebook" target="_blank"></a></li>
-      </ul>
+  <footer class="primary-footer" id="contact">
+    <h2>Contact Me</h2>
+    <ul class="social-links">
+      <li><a href="mailto:contact@stevendsanders.com" class="icon-envelope-alt" target="_blank"> contact@stevendsanders.com</a></li>
+      <li><a href="http://www.linkedin.com/in/stevendsanders" class="icon-linkedin" target="_blank"> linkedin.com/in/stevendsanders</a></li>
+      <li><a href="http://www.github.com/sdsanders" class="icon-github" target="_blank"> github.com/sdsanders</a></li>
+      <li><a href="http://www.twitter.com/stevendsanders" class="icon-twitter" target="_blank"> @stevendsanders</a></li>
+      <li><a href="https://www.facebook.com/steven.douglas.sanders" class="icon-facebook" target="_blank"> facebook.com/steven.douglas.sanders</a></li>
+    </ul>
   </footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#navigation').localScroll();
+});
+</script>
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22874307-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>

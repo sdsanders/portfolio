@@ -1,6 +1,7 @@
 @import "compass";
 @import "variables";
 @import "fonts";
+@import "icons";
 
 
 *,
@@ -9,10 +10,16 @@
   @include box-sizing(border-box);
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background: url(../images/bg-body.png);
   color: $copy-color;
-  font-family: $copy-font;
+  font: 18px $copy-font;
+  margin: 0;
 }
 
 h1,
@@ -26,12 +33,32 @@ h6 {
 }
 
 a {
-  @include transition(all 0.3s ease-in-out);
-  color: $link-color;
+  @include transition(all 0.2s ease-in-out);
+  color: darken($link-color, 10%);
   text-decoration: none;
 
   &:hover {
-    color: lighten($link-color, 20%);
+    color: darken($link-color, 20%);
+  }
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-top: 0;
+
+  &:before {
+    color: $red;
+    content: "{";
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  @media screen and (min-width: $break-small) {
+    font-size: 48px;
   }
 }
 
@@ -39,16 +66,34 @@ a {
 // Header
 
 .primary-header {
+  @include box-shadow(0 6px 20px 0 rgba(#000, 0.2));
+  background: url(../images/bg-header.jpg) no-repeat fixed;
+  background-size: contain;
+  border-bottom: 1px solid #111;
+  padding: 50px 0;
   text-align: center;
+  height: inherit;
+}
+
+.header-interior {
+  position: absolute; bottom: 0;
+  width: 100%;
+
+  @media screen and (min-width: $break-small) {
+    bottom: 4%;
+  }
 }
 
 .site-title {
+  color: $link-color;
   display: block;
+  margin: 0 0 50px;
 }
 
 .profession {
+  color: $copy-color;
   display: block;
-  font-size: 16px;
+  font: 24px $copy-font;
 }
 
 
@@ -62,8 +107,53 @@ a {
   }
 
   li {
-    display: inline-block;
-    margin: 7px;
+    border-left: 1px solid rgba(255,255,255,0.05);
+    display: block;
+    float: left;
+    width: 33%;
+
+    &:first-child {
+      border: none;
+    }
+
+    @media screen and (min-width: $break-small) {
+      border: none;
+      display: inline-block;
+      float: none;
+      margin: 20px;
+      width: auto;
+    }
+  }
+
+  a {
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    padding: 15px;
+
+    &:before {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 24px;
+      vertical-align: -10%;
+      width: auto;
+    }
+
+    &:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    @media screen and (min-width: $break-small) {
+      @include border-radius(5px);
+      display: inline;
+
+      &:before {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 15px;
+      }
+    }
   }
 }
 
@@ -72,62 +162,111 @@ a {
 
 .primary-content {
   margin: auto;
-  max-width: 500px;
+  padding: 0 15px;
+  max-width: 1000px;
+
+  h2 {
+    text-align: left;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: $break-small) {
+    padding: 0;
+  }
 }
 
 
-// Social Links
+// About
+
+.about-me {
+  padding: 100px 0;
+}
+
+.about-photo {
+  display: none;
+
+  @media screen and (min-width: $break-small) {
+    @include border-radius(25px);
+    display: block;
+    float: right;
+    margin-left: 50px;
+  }
+}
+
+
+// Portfolio
+
+.portfolio {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.portfolio-item {
+  display: inline-block;
+  margin: 10px;
+
+  img {
+    max-width: 100%;
+
+    @media screen and (min-width: $break-small) {
+      max-width: 300px;
+    }
+  }
+}
+
+
+// Footer
+
+.primary-footer {
+  margin: auto;
+  max-width: 1000px;
+  padding: 100px 15px;
+
+  @media screen and (min-width: $break-small) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 .social-links {
   list-style: none;
+  padding: 0;
   text-align: center;
 
   li {
     display: inline-block;
-    margin: 0 5px;
-  }
-}
+    margin: 20px 0;
 
-[class^="icon-"],
-[class*=" icon-"] {
-  font-family: 'portfolio-icons';
-  speak: none;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  text-indent: -9999px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    &:first-child {
+      display: block;
 
-  &:before {
-    
-  }
-}
-
-.icon-facebook:before {
-  content: "\e600";
-}
-
-.icon-linkedin:before {
-  content: "\e601";
-}
-
-.icon-twitter:before {
-  content: "\e602";
-}
-
-.icon-github:before {
-  content: "\e603";
-}
-
-
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    @font-face {
-        font-family: 'icons';
-        src: url('fonts/icons.svg#icons') format('svg');
+      a {
+        font-size: 18px;
+      }
     }
+  }
+
+  a {
+    color: #fff;
+    font-size: 0;
+
+    &:before {
+      color: $link-color;
+    }
+  }
+
+  @media screen and (min-width: $break-small) {
+    text-align: left;
+
+    li {
+      display: block;
+    }
+
+    a {
+      font-size: 16px;
+    }
+  }
 }
