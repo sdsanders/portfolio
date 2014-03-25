@@ -179,7 +179,7 @@ h2:before {
   -moz-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
   background: url(../images/bg-header.jpg) no-repeat fixed;
-  background-size: contain;
+  background-size: cover;
   border-bottom: 1px solid #111;
   padding: 50px 0;
   text-align: center;
